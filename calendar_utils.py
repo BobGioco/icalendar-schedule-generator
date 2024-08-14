@@ -10,7 +10,7 @@ def create_calendar(events, start_date, weeks, timezone):
         event_start_date = datetime.strptime(event["start_date"], "%Y-%m-%d")
         event_end_date = datetime.strptime(event["end_date"], "%Y-%m-%d")
 
-        for day in event["day"]:
+        for day in event["days"]:
             for i in range(weeks):
                 event_date = start_date + timedelta(days=day + i * 7)
                 if event_start_date <= event_date <= event_end_date:
