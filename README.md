@@ -57,18 +57,18 @@ TIMEZONE = "America/New_York"
 
 #### Events (`events.py`)
 
-Modify the `events` list to include the details of each event, including the summary, start time, end time, and the day of the week.
+Modify the events list to include the details of each event, including the summary, start time, end time, day of the week, start date, and end date.
 
 Example `events.py`:
 ```python
 events = [
-    {"summary": "Morning Yoga", "start": "07:00", "end": "08:00", "day": 0},
-    {"summary": "Project Planning Meeting", "start": "10:00", "end": "11:00", "day": 0},
-    {"summary": "Lunch Break", "start": "12:00", "end": "13:00", "day": 0},
-    {"summary": "JavaScript Basics", "start": "14:00", "end": "16:00", "day": 0},
-    {"summary": "Evening Jog", "start": "18:00", "end": "19:00", "day": 0},
-    {"summary": "Cooking Class", "start": "19:30", "end": "21:00", "day": 0},
-    # ... Add more events as needed
+    {"summary": "Morning Yoga", "start": "07:00", "end": "08:00", "day": [0, 2], "start_date": "2024-08-19", "end_date": "2024-09-16"},
+    {"summary": "Project Planning Meeting", "start": "10:00", "end": "11:00", "day": [0], "start_date": "2024-08-19", "end_date": "2024-09-16"},
+    {"summary": "Lunch Break", "start": "12:00", "end": "13:00", "day": [0, 1, 2, 3, 4], "start_date": "2024-08-19", "end_date": "2024-09-16"},
+    {"summary": "JavaScript Basics", "start": "14:00", "end": "16:00", "day": [0], "start_date": "2024-08-19", "end_date": "2024-09-16"},
+    {"summary": "Evening Jog", "start": "18:00", "end": "19:00", "day": [0, 2, 4], "start_date": "2024-08-19", "end_date": "2024-09-16"},
+    {"summary": "Cooking Class", "start": "19:30", "end": "21:00", "day": [0], "start_date": "2024-08-19", "end_date": "2024-09-16"},
+    # Add more events as needed
 ]
 ```
 
