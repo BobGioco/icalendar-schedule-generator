@@ -57,17 +57,61 @@ TIMEZONE = "America/New_York"
 
 #### Events (`events.py`)
 
-Modify the events list to include the details of each event, including the summary, start time, end time, day of the week, start date, and end date.
+Modify the events list to include the details of each event, including the summary, start time, end time, start date, end date, frequency, byday, and recurrence.
 
 Example `events.py`:
 ```python
 events = [
-    {"summary": "Morning Yoga", "start": "07:00", "end": "08:00", "day": [0, 2], "start_date": "2024-08-19", "end_date": "2024-09-16"},
-    {"summary": "Project Planning Meeting", "start": "10:00", "end": "11:00", "day": [0], "start_date": "2024-08-19", "end_date": "2024-09-16"},
-    {"summary": "Lunch Break", "start": "12:00", "end": "13:00", "day": [0, 1, 2, 3, 4], "start_date": "2024-08-19", "end_date": "2024-09-16"},
-    {"summary": "JavaScript Basics", "start": "14:00", "end": "16:00", "day": [0], "start_date": "2024-08-19", "end_date": "2024-09-16"},
-    {"summary": "Evening Jog", "start": "18:00", "end": "19:00", "day": [0, 2, 4], "start_date": "2024-08-19", "end_date": "2024-09-16"},
-    {"summary": "Cooking Class", "start": "19:30", "end": "21:00", "day": [0], "start_date": "2024-08-19", "end_date": "2024-09-16"},
+    {
+        "summary": "Project Meeting",
+        "description": "Discuss project milestones and deliverables.",
+        "location": "Conference Room A",
+        "start": "10:00",
+        "end": "11:00",
+        "start_date": "2024-08-19",
+        "end_date": "2024-10-07",
+        "uid": "uid1@example.com",
+        "status": "CONFIRMED",
+        "sequence": 0,
+        "frequency": "WEEKLY",
+        "byday": ["MO", "WE"],
+        "recurrence": 8,
+        "attendees": ["mailto:johndoe@example.com"],
+        "organizer": "mailto:jane.doe@example.com",
+        "priority": 5,
+        "categories": ["Meeting", "Work"],
+        "color_id": "9",
+        "hangout_link": "https://hangouts.google.com/call/abcdefg",
+        "geo": "37.386013;-122.082932",
+        "transp": "OPAQUE",
+        "class": "PUBLIC",
+        "attach": "http://example.com/agenda.pdf"
+    },
+    {
+        "summary": "Morning Yoga",
+        "description": "Daily morning yoga session.",
+        "location": "Gym",
+        "start": "07:00",
+        "end": "08:00",
+        "start_date": "2024-08-20",
+        "end_date": "2024-10-09",
+        "uid": "uid2@example.com",
+        "status": "CONFIRMED",
+        "sequence": 0,
+        "frequency": "WEEKLY",
+        "byday": ["TU", "TH", "SA"],
+        "recurrence": 8,
+        "attendees": ["mailto:janedoe@example.com"],
+        "organizer": "mailto:johndoe@example.com",
+        "priority": 3,
+        "categories": ["Exercise", "Health"],
+        "color_id": "5",
+        "hangout_link": "https://hangouts.google.com/call/hijklmn",
+        "geo": "40.712776;-74.005974",
+        "transp": "OPAQUE",
+        "class": "PUBLIC",
+        "attach": "http://example.com/yoga.pdf"
+    },
     # Add more events as needed
 ]
 ```
